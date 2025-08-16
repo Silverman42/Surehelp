@@ -1,13 +1,18 @@
 <script setup lang="ts">
-const selectedUserType = ref("customers");
+import { set } from "@vueuse/core";
+
+const selectedUserType = ref(UserTypes.CUSTOMERS);
+
+const { setUserType } = useRegisterationStore();
+
 const userTypes = [
   {
-    id: "customers",
+    id: UserTypes.CUSTOMERS,
     label: "I’m a client, looking forward to hiring a professional.",
     icon: "/img/customers-icon.svg",
   },
   {
-    id: "artisans",
+    id: UserTypes.ARTISANS,
     label: "I’m a professional artisan, looking for a client.",
     icon: "/img/artisan-icon.svg",
   },
@@ -15,6 +20,7 @@ const userTypes = [
 const { setRouteActivity } = useRegisterationStep();
 
 const selectUserType = () => {
+  setUserType(selectedUserType.value);
   setRouteActivity(RegisterRouteNames.SUBMIT_DATA, true);
 };
 </script>

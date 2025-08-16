@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { setRouteActivity } = useRegisterationStep();
+const { selectedUserType } = useRegisterationStore();
 
 const createAccount = () => {
   setRouteActivity(RegisterRouteNames.VERIFY_EMAIL, true);
@@ -9,8 +10,18 @@ const createAccount = () => {
   <div
     class="max-w-[608px] mx-auto w-full flex flex-col gap-y-[56px] items-center justify-center min-h-[80vh]"
   >
-    <h1 class="text-center text-2xl md:text-[36px] text-black tracking-tighter">
+    <h1
+      v-if="selectedUserType === UserTypes.ARTISANS"
+      class="text-center text-2xl md:text-[36px] text-black tracking-tighter"
+    >
       Sign up as an artisan to showcase your services to potential clients
+    </h1>
+
+    <h1
+      v-if="selectedUserType === UserTypes.CUSTOMERS"
+      class="text-center text-2xl md:text-[36px] text-black tracking-tighter"
+    >
+      Sign up as a customer to hire professional artisans or request services
     </h1>
 
     <form
