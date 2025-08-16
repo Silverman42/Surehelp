@@ -23,7 +23,7 @@ const handleLogin = () => {
 
       <!-- login form -->
       <div
-        class="max-w-[653px] w-full rounded-[32px] bg-white px-6 md:p-18 flex flex-col gap-y-12 shrink-0"
+        class="max-w-[653px] w-full rounded-[32px] bg-white p-6 md:p-18 flex flex-col gap-y-12 shrink-0"
       >
         <div>
           <h1
