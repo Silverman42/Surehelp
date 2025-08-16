@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+
+/* Fonts */
+/*
+ * If TheLoveClub.otf continues to cause OTS parsing errors, consider:
+ * 1. Converting to WOFF2 format for better browser compatibility
+ * 2. Using a web font service like Google Fonts
+ * 3. Replacing with a similar alternative font
+ */
+@font-face {
+    font-family: 'TheLoveClub';
+    src: url('/assets/fonts/TheLoveClub.otf') format('opentype'),
+         url('/assets/fonts/TheLoveClub.otf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/assets/fonts/Lato/Lato-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-SemiBold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('/assets/fonts/Playfair/static/Playfair_144pt-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@theme{
+    /* fonts */
+    --font-body: 'Lato';
+    --font-serif: 'Playfair';
+
+    /* colors */
+    --color-primary-50: oklch(0.97 0.014 254.604);
+    --color-primary-100: oklch(0.932 0.032 255.585);
+    --color-primary-200: oklch(0.882 0.059 254.128);
+    --color-primary-300: oklch(0.809 0.105 251.813);
+    --color-primary-400: oklch(0.707 0.165 254.624);
+    --color-primary-500: oklch(0.623 0.214 259.815);
+    --color-primary-600: oklch(0.546 0.245 262.881);
+    --color-primary-700: oklch(0.488 0.243 264.376);
+    --color-primary-800: oklch(0.424 0.199 265.638);
+    --color-primary-900: oklch(0.379 0.146 265.522);
+    --color-primary-950: oklch(0.282 0.091 267.935);
+
+     --color-secondary: oklch(0.623 0.214 259.815);
+}
