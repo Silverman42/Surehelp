@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { set } from "@vueuse/core";
-
 const selectedUserType = ref(UserTypes.CUSTOMERS);
 
 const { setUserType } = useRegisterationStore();
@@ -48,7 +46,7 @@ const selectUserType = () => {
     </div>
     <!-- heading end -->
 
-    <div class="max-w-[770px] my-12 grid grid-cols-1 md:grid-cols-2 gap-x-6">
+    <div class="max-w-[770px] my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
       <label
         :for="user.id"
         tabindex="0"
@@ -79,7 +77,12 @@ const selectUserType = () => {
     </div>
 
     <div class="max-w-[329px] w-full">
-      <AppButton @click="selectUserType"> Register as a Professional</AppButton>
+      <AppButton @click="selectUserType">
+        Register as a
+        {{
+          selectedUserType === UserTypes.ARTISANS ? "Professional" : "Customer"
+        }}</AppButton
+      >
     </div>
 
     <p class="text-center text-sm md:text-base text-[#686868] mt-8">

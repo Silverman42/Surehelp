@@ -6,7 +6,7 @@
       <slot name="cta"></slot>
     </div>
 
-    <div class="w-full relative">
+    <div class="w-full relative py-8">
       <slot></slot>
     </div>
   </div>
