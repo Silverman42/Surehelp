@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   pages: true,
   ssr: false,
   devtools: { enabled: true },
-  modules: ["@nuxt/icon", "@vueuse/nuxt"],
+  modules: ["@nuxt/icon", "@vueuse/nuxt", "nuxt-mcp"],
+  mcp: {
+    updateConfig: false,
+  },
   css: ["~/assets/css/main.css", "~/assets/css/transitions.css"],
   vite: {
     plugins: [tailwindcss()],
